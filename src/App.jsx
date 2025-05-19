@@ -7,8 +7,16 @@ const App = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  const handleSearch = (city) => {
+  const handleSearch = async (city) => {
     console.log("Searching for city:", city);
+
+    setIsLoading(true);
+    setError(null);
+    setWeatherData(null);
+
+    await new Promise((resolve) => setTimeout(resolve, 1500));
+    setError(`Failed to fetch weather for ${city}`);
+    setIsLoading(false);
   };
 
   return (
