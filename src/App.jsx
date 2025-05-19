@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import SearchBar from "./components/SearchBar/SearchBar";
+import { fetchWeatherData } from "./services/weatherService";
 import "./App.css";
 
 const App = () => {
