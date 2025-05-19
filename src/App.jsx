@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import SearchBar from "./components/SearchBar/SearchBar";
 import { fetchWeatherData } from "./services/weatherService";
 import "./App.css";
+import WeatherDisplay from "./components/WeatherDisplay/WeatherDisplay";
 
 const App = () => {
   const [weatherData, setWeatherData] = useState(null);
@@ -29,6 +30,7 @@ const App = () => {
       <SearchBar onSearch={handleSearch} />
       {isLoading}
       {error}
+      <WeatherDisplay />
     </div>
   );
 };
