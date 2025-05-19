@@ -30,7 +30,7 @@ const App = () => {
       <SearchBar onSearch={handleSearch} />
       {isLoading}
       {error}
-      <WeatherDisplay />
+      <WeatherDisplay data={weatherData} />
     </div>
   );
 };
