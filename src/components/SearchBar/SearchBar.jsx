@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function SearchBar() {
+function SearchBar({ onSearch }) {
   const [city, setCity] = useState("");
 
   function handleChange(event) {
